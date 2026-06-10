@@ -1,15 +1,17 @@
-# Contribution [#]: [Issue Title]
+# Contribution 1: Quantized Training
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** 1  
+**Student:** Kaung Myat Naing  
+**Issue:** https://github.com/pytorch/ao/issues/554  
+**Status:** Phase I In Progress  
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I chose this issue because it is directly related to my interests in machine learning systems, efficient AI, and model optimization. Quantized training is important because it can reduce memory usage during training and potentially make larger model training more accessible. Since TorchAO focuses on PyTorch-native optimization workflows, this issue gives me a chance to learn how real-world ML infrastructure supports lower-precision training techniques such as INT8, FP8, and quantization-aware workflows.
+
+This issue also matches my learning goals because I want to go deeper than application-level AI work and understand how model training can be optimized at the framework level. I hope to learn how TorchAO organizes quantized training code, how benchmark or recipe scripts are structured, and how to compare a baseline training path against a quantized training path using metrics like loss, memory usage, and runtime.
 
 ---
 
@@ -17,19 +19,26 @@
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+TorchAO currently has strong support for quantization and model optimization, but this issue asks for more practical quantized training recipes or examples. In my own words, what is missing is a clear, runnable starting point that shows how to train a small model using a quantized training approach and compare it against a normal BF16/FP16 baseline.
 
 ### Expected Behavior
 
-[What should happen?]
+There should be a small, understandable example or recipe that demonstrates quantized training in TorchAO. Ideally, the example should make it easy to compare a normal training baseline with a quantized training path and report basic results such as loss behavior, memory usage, and runtime. This would help new contributors and users understand how quantized training works in TorchAO.
 
 ### Current Behavior
 
-[What actually happens?]
+The issue describes quantized training as an important direction, but the full scope is broad. It discusses different possible precision choices for weights, activations, and optimizer states, but there is not yet a simple beginner-friendly recipe attached to the issue that clearly demonstrates one complete small-scale quantized training workflow.
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+The main parts of the codebase likely involved are:
+
+- `torchao/prototype/quantized_training`
+- Existing quantized training examples or benchmark scripts
+- Benchmark or recipe structure used for comparing baseline training against quantized training
+- TorchAO tensor or quantization utilities used by the quantized training path
+
+For my first contribution, I plan to start by reading the existing quantized training prototype code and identifying the smallest realistic place to add a runnable example or benchmark.
 
 ---
 
